@@ -1,0 +1,140 @@
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % python --version
+Python 3.13.5
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % pip install numpy matplotlib jupyter scipy
+Requirement already satisfied: numpy in /opt/anaconda3/lib/python3.13/site-packages (2.1.3)
+Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.13/site-packages (3.10.0)
+Requirement already satisfied: jupyter in /opt/anaconda3/lib/python3.13/site-packages (1.1.1)
+Requirement already satisfied: scipy in /opt/anaconda3/lib/python3.13/site-packages (1.15.3)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: cycler>=0.10 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (4.55.3)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (24.2)
+Requirement already satisfied: pillow>=8 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (11.1.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (3.2.0)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/anaconda3/lib/python3.13/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: notebook in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (7.3.2)
+Requirement already satisfied: jupyter-console in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (6.6.3)
+Requirement already satisfied: nbconvert in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (7.16.6)
+Requirement already satisfied: ipykernel in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (6.29.5)
+Requirement already satisfied: ipywidgets in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (8.1.5)
+Requirement already satisfied: jupyterlab in /opt/anaconda3/lib/python3.13/site-packages (from jupyter) (4.3.4)
+Requirement already satisfied: six>=1.5 in /opt/anaconda3/lib/python3.13/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Requirement already satisfied: appnope in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (0.1.3)
+Requirement already satisfied: comm>=0.1.1 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (0.2.1)
+Requirement already satisfied: debugpy>=1.6.5 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (1.8.11)
+Requirement already satisfied: ipython>=7.23.1 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (8.30.0)
+Requirement already satisfied: jupyter-client>=6.1.12 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (8.6.3)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (5.7.2)
+Requirement already satisfied: matplotlib-inline>=0.1 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (0.1.6)
+Requirement already satisfied: nest-asyncio in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (1.6.0)
+Requirement already satisfied: psutil in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (5.9.0)
+Requirement already satisfied: pyzmq>=24 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (26.2.0)
+Requirement already satisfied: tornado>=6.1 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (6.5.1)
+Requirement already satisfied: traitlets>=5.4.0 in /opt/anaconda3/lib/python3.13/site-packages (from ipykernel->jupyter) (5.14.3)
+Requirement already satisfied: decorator in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (5.1.1)
+Requirement already satisfied: jedi>=0.16 in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.19.2)
+Requirement already satisfied: prompt-toolkit<3.1.0,>=3.0.41 in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (3.0.43)
+Requirement already satisfied: pygments>=2.4.0 in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (2.19.1)
+Requirement already satisfied: stack-data in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.2.0)
+Requirement already satisfied: pexpect>4.3 in /opt/anaconda3/lib/python3.13/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (4.8.0)
+Requirement already satisfied: wcwidth in /opt/anaconda3/lib/python3.13/site-packages (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel->jupyter) (0.2.5)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /opt/anaconda3/lib/python3.13/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->jupyter) (0.8.4)
+Requirement already satisfied: platformdirs>=2.5 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-core!=5.0.*,>=4.12->ipykernel->jupyter) (4.3.7)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/anaconda3/lib/python3.13/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter) (0.7.0)
+Requirement already satisfied: widgetsnbextension~=4.0.12 in /opt/anaconda3/lib/python3.13/site-packages (from ipywidgets->jupyter) (4.0.13)
+Requirement already satisfied: jupyterlab-widgets~=3.0.12 in /opt/anaconda3/lib/python3.13/site-packages (from ipywidgets->jupyter) (3.0.13)
+Requirement already satisfied: async-lru>=1.0.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (2.0.4)
+Requirement already satisfied: httpx>=0.25.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (0.28.1)
+Requirement already satisfied: jinja2>=3.0.3 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (3.1.6)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (2.2.5)
+Requirement already satisfied: jupyter-server<3,>=2.4.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (2.15.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.27.1 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (2.27.3)
+Requirement already satisfied: notebook-shim>=0.2 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (0.2.4)
+Requirement already satisfied: setuptools>=40.8.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab->jupyter) (72.1.0)
+Requirement already satisfied: anyio>=3.1.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (4.7.0)
+Requirement already satisfied: argon2-cffi>=21.1 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (21.3.0)
+Requirement already satisfied: jupyter-events>=0.11.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.5.3)
+Requirement already satisfied: nbformat>=5.3.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (5.10.4)
+Requirement already satisfied: overrides>=5.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (7.4.0)
+Requirement already satisfied: prometheus-client>=0.9 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.21.1)
+Requirement already satisfied: send2trash>=1.8.2 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.8.2)
+Requirement already satisfied: terminado>=0.8.3 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.17.1)
+Requirement already satisfied: websocket-client>=1.7 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.8.0)
+Requirement already satisfied: babel>=2.10 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.16.0)
+Requirement already satisfied: json5>=0.9.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (0.9.25)
+Requirement already satisfied: jsonschema>=4.18.0 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (4.23.0)
+Requirement already satisfied: requests>=2.31 in /opt/anaconda3/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.32.3)
+Requirement already satisfied: idna>=2.8 in /opt/anaconda3/lib/python3.13/site-packages (from anyio>=3.1.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (3.7)
+Requirement already satisfied: sniffio>=1.1 in /opt/anaconda3/lib/python3.13/site-packages (from anyio>=3.1.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.3.0)
+Requirement already satisfied: argon2-cffi-bindings in /opt/anaconda3/lib/python3.13/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (21.2.0)
+Requirement already satisfied: certifi in /opt/anaconda3/lib/python3.13/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (2025.8.3)
+Requirement already satisfied: httpcore==1.* in /opt/anaconda3/lib/python3.13/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /opt/anaconda3/lib/python3.13/site-packages (from httpcore==1.*->httpx>=0.25.0->jupyterlab->jupyter) (0.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/anaconda3/lib/python3.13/site-packages (from jinja2>=3.0.3->jupyterlab->jupyter) (3.0.2)
+Requirement already satisfied: attrs>=22.2.0 in /opt/anaconda3/lib/python3.13/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (24.3.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /opt/anaconda3/lib/python3.13/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2023.7.1)
+Requirement already satisfied: referencing>=0.28.4 in /opt/anaconda3/lib/python3.13/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (0.30.2)
+Requirement already satisfied: rpds-py>=0.7.1 in /opt/anaconda3/lib/python3.13/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (0.22.3)
+Requirement already satisfied: python-json-logger>=2.0.4 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (3.2.1)
+Requirement already satisfied: pyyaml>=5.3 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (6.0.2)
+Requirement already satisfied: rfc3339-validator in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in /opt/anaconda3/lib/python3.13/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.1.1)
+Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: jsonpointer>1.13 in /opt/anaconda3/lib/python3.13/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.1)
+Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+  Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+  Downloading webcolors-25.10.0-py3-none-any.whl.metadata (2.2 kB)
+Requirement already satisfied: beautifulsoup4 in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (4.12.3)
+Requirement already satisfied: bleach!=5.0.0 in /opt/anaconda3/lib/python3.13/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter) (6.2.0)
+Requirement already satisfied: defusedxml in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (0.3.0)
+Requirement already satisfied: mistune<4,>=2.0.3 in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (3.1.2)
+Requirement already satisfied: nbclient>=0.5.0 in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (0.10.2)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/anaconda3/lib/python3.13/site-packages (from nbconvert->jupyter) (1.5.0)
+Requirement already satisfied: webencodings in /opt/anaconda3/lib/python3.13/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in /opt/anaconda3/lib/python3.13/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in /opt/anaconda3/lib/python3.13/site-packages (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.20.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/anaconda3/lib/python3.13/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/anaconda3/lib/python3.13/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.3.0)
+Requirement already satisfied: cffi>=1.0.1 in /opt/anaconda3/lib/python3.13/site-packages (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.17.1)
+Requirement already satisfied: pycparser in /opt/anaconda3/lib/python3.13/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.21)
+Requirement already satisfied: soupsieve>1.2 in /opt/anaconda3/lib/python3.13/site-packages (from beautifulsoup4->nbconvert->jupyter) (2.5)
+Requirement already satisfied: arrow>=0.15.0 in /opt/anaconda3/lib/python3.13/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.3.0)
+Requirement already satisfied: executing in /opt/anaconda3/lib/python3.13/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (0.8.3)
+Requirement already satisfied: asttokens in /opt/anaconda3/lib/python3.13/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (3.0.0)
+Requirement already satisfied: pure-eval in /opt/anaconda3/lib/python3.13/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (0.2.2)
+Downloading webcolors-25.10.0-py3-none-any.whl (14 kB)
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Installing collected packages: webcolors, uri-template, fqdn, isoduration
+Successfully installed fqdn-1.5.1 isoduration-20.11.0 uri-template-1.3.0 webcolors-25.10.0
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % git --version
+git version 2.50.1 (Apple Git-155)
+
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % git config --global user.name "Savvy"
+git config --global user.email "savvy786@gmail.com"
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % git config --list
+
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.name=Savvy
+user.email=savvy786@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.active=.
+remote.origin.url=https://github.com/GitSavvy/perplexity-prep.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+(base) shashwatgupta@SHASHWATs-MacBook-Pro perplexity-prep % 
